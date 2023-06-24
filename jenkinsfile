@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    options {
+        // Timeout counter starts AFTER agent is allocated
+        timeout(time: 1, unit: 'SECONDS')
+    }
+    stages {
+        stage('Initialize') {
+            steps {
+                echo 'initialize stage'
+            }
+        }
+        stage('setup') {
+                    steps {
+                    echo 'setup stage'
+        }
+        stage('Run') {
+                    steps {
+                        echo 'Run stage'
+                    }
+        stage('Deploy') {
+                    steps {
+                        echo 'deploy stage'
+                    }
+    }
+}
